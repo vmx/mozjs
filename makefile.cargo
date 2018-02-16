@@ -22,11 +22,11 @@ ifneq ($(HOST),$(TARGET))
 	endif
 
 	ifeq (android,$(findstring android,$(TARGET)))
-		CONFIGURE_FLAGS += \
-			--with-android-ndk=$(ANDROID_NDK) \
-			--with-android-toolchain=$(ANDROID_TOOLCHAIN) \
-			--with-android-version=$(NDK_ANDROID_VERSION) \
-			$(NULL)
+	# 	CONFIGURE_FLAGS += \
+	# 		--with-android-ndk=$(ANDROID_NDK) \
+	# 		--with-android-toolchain=$(ANDROID_TOOLCHAIN) \
+	# 		--with-android-version=$(NDK_ANDROID_VERSION) \
+	# 		$(NULL)
 	endif
 
 CC ?= $(TARGET)-gcc
