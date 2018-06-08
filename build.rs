@@ -159,7 +159,7 @@ fn build_jsapi_bindings() {
         builder = builder.clang_arg("-fms-compatibility");
     }
 
-    if let Ok(flags) = env::var("CXXFLAGS") {
+    if let Ok(flags) = env::var("BINDGEN_CXXFLAGS") {
         for flag in flags.split_whitespace() {
             builder = builder.clang_arg(flag);
         }
